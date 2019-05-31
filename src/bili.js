@@ -21,8 +21,8 @@ class bili extends Component {
                                 item.type === "video" ? video_icon : audio_icon
                             }
                         />
-                        <a href={item.url} target="_blank" rel="noopener noreferrer">
-                            {item.name}
+                        <a href={'https://www.bilibili.com/'+item.url} target="_blank" rel="noopener noreferrer">
+                            {item.name} {item.player?'('+item.player+')':''}
                         </a>
                     </li>)
                 })

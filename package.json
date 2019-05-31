@@ -1,7 +1,8 @@
 {
   "name": "wzgc",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": ".",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

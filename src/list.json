@@ -1,18 +1,22 @@
 {
   "bili": [
     {
-      "cover_img": "",
       "name": "高机与吴三春",
       "player": "泮国英",
       "type": "video",
-      "url": "https://www.bilibili.com/video/av53931810"
+      "url": "video/av53931810"
     },
     {
-      "cover_img": "",
       "name": "巴山大侠",
       "player": "",
       "type": "audio",
-      "url": "https://www.bilibili.com/audio/am29240752"
+      "url": "audio/am29240752"
+    },
+    {
+      "name": "三请薛仁贵",
+      "player": "王爱芳",
+      "type": "video",
+      "url": "video/av54151987"
     }
   ]
 }
