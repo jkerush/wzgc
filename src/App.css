@@ -1,0 +1,56 @@
+html,body{
+  background: #efefef;
+}
+.App {
+  font-size: 1rem;
+  margin: 0 auto;
+  padding-bottom: 6.5rem
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.lis{
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.lis li{
+  position: relative;
+  padding: 0 .5rem;
+  line-height: 1.7;
+  margin: .7rem .3rem;
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-start;
+  align-items: center
+}
+.lis li::after{
+  content: "";
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-right: 1px solid #999;
+  border-top: 1px solid #999;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%) rotateZ(45deg);
+}
+.lis li img{
+  width: 1.5rem;
+  margin-right: .5rem
+}
+.lis li a{
+  color: #333;
+  display: block;
+  width: 100%;
+  padding: 1rem 0;
+  font-weight: bold;
+  text-shadow: 0 0 1px #ccc;
+  text-decoration: none
+}

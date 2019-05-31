@@ -1,0 +1,48 @@
+.pages{
+  position: fixed;
+  left: 0;
+  padding: 12px 0;
+  background-color: #fff;
+  box-shadow: 0 0 1px #ccc;
+  bottom:0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1rem;
+}
+.pages strong{
+  display: inline-block;
+  font-size: 1.3rem;
+  color: red;
+}
+
+.pages button{
+  outline: none;
+  display: block;
+  padding: .8rem .9rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  text-shadow: 0 0 2px #ccc
+}
+.pages button.lt,.pages button.gt{
+  font-size: 1.3rem;
+  padding: .8rem 1rem;
+  border-color: #666;
+
+}
+.pages button:active{
+  background-color: #ddd;
+}
+.pages button.start{
+  padding: .6rem .4rem;
+  color: #476EEF
+}
+.pages button.end{
+  padding: .6rem .4rem;
+  color: #FF4C86
+}
