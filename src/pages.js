@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import left from './left.png';
+import right from './right.png';
 import './pages.css'
 class pages extends Component {
   constructor(props) {
@@ -11,9 +13,9 @@ class pages extends Component {
     return ( 
       <div className='pages'>
           <button className="start" onClick={this.firstPage.bind(this)}>首页</button>
-          <button className="lt" onClick={this.prevPage.bind(this)}>&lt;</button>
+          <button className="lt" onClick={this.prevPage.bind(this)}><img src={left} alt="左箭头"/></button>
           <span>第<strong>{this.props.currentPage}</strong>页</span>
-          <button className="gt" onClick={this.nextPage.bind(this)}>&gt;</button>
+          <button className="gt" onClick={this.nextPage.bind(this)}><img src={right} alt="右箭头"/></button>
           <button  className="end" onClick={this.lastPage.bind(this)}>末页</button>
       </div>
      );

@@ -16,7 +16,10 @@
   font-size: 1.3rem;
   color: red;
 }
-
+.pages img{
+  height: 23px;
+  width: auto;
+}
 .pages button{
   outline: none;
   display: block;
@@ -30,7 +33,7 @@
   text-shadow: 0 0 2px #ccc
 }
 .pages button.lt,.pages button.gt{
-  font-size: 1.3rem;
+  font-size: 0;
   padding: .8rem 1rem;
   border-color: #666;
 
