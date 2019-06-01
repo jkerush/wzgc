@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from "react";
+import axios from 'axios'
+// import list from "./list.json";
 import Pages from "./pages";
 import TempUl from "./TempUl";
 
@@ -6,8 +8,8 @@ class MainCont extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            list: props.list,
-            lens: props.list.length,
+            list: [],
+            lens: 0,
             currentArr:[],
             currentPage:1,
             maxNum:0,
@@ -19,16 +21,27 @@ class MainCont extends Component {
         this.lastPage = this.lastPage.bind(this)   
     }
     componentWillMount (){
-      let tempArr = this.state.list.slice(0,this.state.pageCount)
-      // console.log('tempArr: ',tempArr)
-      // console.log('lens: ',this.state.lens)
-      let maxNum = Math.ceil(this.state.lens / this.state.pageCount)
-      // console.log('maxNum: ',maxNum)
-      this.setState({
-        currentArr:tempArr,
-        maxNum:maxNum
-      })
+      axios.get(process.env.PUBLIC_URL+'/list.json').then(res=>{
+        let list = res.data.bili
+        console.log(res.data.bili)
+        this.setState({
+          list:list,
+          lens:list.length
+        })
+        let tempArr = this.state.list.slice(0,this.state.pageCount)
+        // console.log('tempArr: ',tempArr)
+        // console.log('lens: ',this.state.lens)
+        let maxNum = Math.ceil(this.state.lens / this.state.pageCount)
+        // console.log('maxNum: ',maxNum)
+        this.setState({
+          currentArr:tempArr,
+          maxNum:maxNum
+        })
+
+    })
+
     }
+
     prevPage(){
       let currentNum = this.state.currentPage
       if(currentNum === 1 ) return;
